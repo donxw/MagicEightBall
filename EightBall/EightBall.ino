@@ -38,6 +38,7 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 const int buttonPin = 0;  // D3 on WiFiKit8 built in OLED
 int buttonState = 0;  // variable to store state of pin 4
+//int lastButtonState = 0;  // variable to store last state of pin 4
 int lastpick = 1;
 int pick = random(1, 10);
 
@@ -67,7 +68,7 @@ void setup() {
   display.clearDisplay();
   display.setTextSize(2);             // Normal 1:1 pixel scale
   display.setTextColor(WHITE);        // Draw white text
-  display.setCursor(0, 0);            // Start position
+  display.setCursor(2, 0);            // Start position
   display.println(F("Ask me"));
   display.println(F("Something"));
   //display.display();
@@ -99,19 +100,17 @@ void setup() {
 
 void loop() {
 
-
-  // if button is pressed, randomly pick a new response, trigger the neopixel light effect then display the random answer
+  // trigger updated answer when the button is pressed
 
   buttonState = digitalRead(buttonPin);
 
   if (buttonState == 0) {   // Press button for new random pick
-    
-    // neopixel light show to indicate thinking
+    //neopixel light show to indicate thinking about an answer
     strip.setBrightness(20); // Set BRIGHTNESS to about 1/5 (max = 255)
     rainbow(10);
     strip.clear();
     strip.show();
-    // draw starflakes to indicate the answer is near
+    //update oled screen with starflakes to indicate the answer is near
     testdrawbitmap();
     testanimate(logo_bmp, LOGO_WIDTH, LOGO_HEIGHT); // Animate bitmaps
 
@@ -131,7 +130,7 @@ void loop() {
         display.clearDisplay();
         display.setTextSize(2);             // Normal 1:1 pixel scale
         display.setTextColor(WHITE);        // Draw white text
-        display.setCursor(0, 0);            // Start position
+        display.setCursor(1, 0);            // Start position
         display.println(F("Outlook"));
         display.println(F(" Good!"));
         display.drawBitmap(
@@ -160,8 +159,9 @@ void loop() {
         display.clearDisplay();
         display.setTextSize(2);             // Normal 1:1 pixel scale
         display.setTextColor(WHITE);        // Draw white text
-        display.setCursor(0, 0);            // Start Position
+        display.setCursor(3, 0);            // Start Position
         display.println(F("Most "));
+        display.setCursor(3, 16);  
         display.println(F("Likely..."));
         display.display();
         delay(1000);
@@ -212,6 +212,7 @@ void loop() {
         display.setTextColor(WHITE);        // Draw white text
         display.setCursor(5, 0);            // Start Position
         display.println(F("Hazy"));
+        display.setCursor(1, 16); 
         display.println(F("try again"));
         display.drawBitmap(
           ((display.width()  - 24 ) / 2) + 35,
@@ -239,8 +240,9 @@ void loop() {
         display.clearDisplay();
         display.setTextSize(2);             // Normal 1:1 pixel scale
         display.setTextColor(WHITE);        // Draw white text
-        display.setCursor(0, 0);            // Start Position
+        display.setCursor(5, 0);            // Start Position
         display.println(F("It is"));
+        display.setCursor(1, 16); 
         display.println(F("Certain"));
         display.drawBitmap(
           ((display.width()  - 32 ) / 2) + 35,
@@ -297,6 +299,7 @@ void loop() {
         display.setTextColor(WHITE);        // Draw white text
         display.setCursor(5, 0);            // Start Position
         display.println(F("Better"));
+        display.setCursor(1, 16); 
         display.println(F("not say"));
         display.drawBitmap(
           ((display.width()  - 30 ) / 2) + 35,
@@ -410,10 +413,11 @@ void loop() {
       default:
         // if nothing else matches, do the default
         // default is optional
-        //randomSeed(random(1,500));
+        pick = random(1, 10);
         break;
     }
   }
+  // require the user to hold the button down until the neopixel lights up
   delay(2000);
 }
 
