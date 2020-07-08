@@ -38,7 +38,6 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 const int buttonPin = 0;  // D3 on WiFiKit8 built in OLED
 int buttonState = 0;  // variable to store state of pin 4
-//int lastButtonState = 0;  // variable to store last state of pin 4
 int lastpick = 1;
 int pick = random(1, 10);
 
