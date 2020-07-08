@@ -36,11 +36,8 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 #define NUMFLAKES     10 // Number of snowflakes in the animation example
 
-//const int buttonPin = 4; // pin 4 is assigned to the tilt switch - use with trinket
-//const int buttonPin = 12;  // D6 on WiFiKit8 built in OLED
 const int buttonPin = 0;  // D3 on WiFiKit8 built in OLED
 int buttonState = 0;  // variable to store state of pin 4
-int lastButtonState = 0;  // variable to store last state of pin 4
 int lastpick = 1;
 int pick = random(1, 10);
 
@@ -103,16 +100,18 @@ void setup() {
 void loop() {
 
 
-  // put the next section in a button action
+  // if button is pressed, randomly pick a new response, trigger the neopixel light effect then display the random answer
 
   buttonState = digitalRead(buttonPin);
 
   if (buttonState == 0) {   // Press button for new random pick
-    //if (buttonState != lastButtonState) {    // change message when tilt swith changes state
+    
+    // neopixel light show to indicate thinking
     strip.setBrightness(20); // Set BRIGHTNESS to about 1/5 (max = 255)
     rainbow(10);
     strip.clear();
     strip.show();
+    // draw starflakes to indicate the answer is near
     testdrawbitmap();
     testanimate(logo_bmp, LOGO_WIDTH, LOGO_HEIGHT); // Animate bitmaps
 
