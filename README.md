@@ -18,4 +18,4 @@ Tilt switch uses the lipo battery as a weight to activate a lever for the micros
 ![tilt_switch_detail (3)](https://user-images.githubusercontent.com/31633408/153773931-ec0ca73e-d6cb-4585-a782-d7cd23191103.JPG)
 
 ##  Code
-Code is commented and should be fairly self-explanatory.  
+Code is commented and should be fairly self-explanatory.  It is based heavily off of learning files on the Adafruit website.  You can get more details there.
