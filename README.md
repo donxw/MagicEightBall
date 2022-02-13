@@ -13,5 +13,5 @@ Random decision maker using a Heltec Wifi Kit 8.  Gravity switch turns on the 8 
 Tilt switch uses the lipo battery as a weight to activate a lever for the microswitch.
 
 ![8-ball_2 (2)](https://user-images.githubusercontent.com/31633408/153773013-9bc0c000-848b-443e-a6cb-3d7332566fa6.JPG)
-![tilt_switch_detail (2)](https://user-images.githubusercontent.com/31633408/153773313-3d5c2e67-5dd1-41b9-b9e3-c86960385843.JPG)
+![tilt_switch_detail (3)](https://user-images.githubusercontent.com/31633408/153773931-ec0ca73e-d6cb-4585-a782-d7cd23191103.JPG)
 
