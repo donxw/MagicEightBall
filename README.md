@@ -2,11 +2,10 @@
 Random decision maker using a Heltec Wifi Kit 8.  Gravity switch turns on the 8 ball when flipped over.  This project is only meant for learning and fun.  Do not use it to make any real decisions!
 
 ## Hardware
-
-Heltec Wifikit8 ESP8266 with built in OLED display.
-Neopixel LED
-Push Button
-Microswitch
+* Heltec Wifikit8 ESP8266 with built in OLED display.
+* Neopixel LED
+* Push Button
+* Microswitch
 
 ## Off Position
 
