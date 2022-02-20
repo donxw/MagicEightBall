@@ -9,7 +9,7 @@ Random decision maker using a Heltec Wifi Kit 8.  Gravity switch turns on the 8 
 
 ![IMG_0373 (Small)](https://user-images.githubusercontent.com/31633408/153772235-c70e0404-b802-4d73-89d5-319c1311d9f8.JPEG)
 
-Press button after asking question.  Hold until the Neopixel LED lights up.  The amount of time the LED animation occurs before the answer is shown can be adjusted in the arduino code.
+Press button after asking question.  Hold until the Neopixel LED lights up.  The amount of time the LED animation lasts before the answer is displayed can be adjusted in the arduino code.
 
 ## Tilt Switch
 Tilt switch uses the lipo battery as a weight to activate a lever for the microswitch.
