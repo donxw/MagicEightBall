@@ -18,4 +18,28 @@ Tilt switch uses the lipo battery as a weight to activate a lever for the micros
 ![tilt_switch_detail (3)](https://user-images.githubusercontent.com/31633408/153773931-ec0ca73e-d6cb-4585-a782-d7cd23191103.JPG)
 
 ##  Code
-Code is commented and should be fairly self-explanatory.  It is based heavily off of learning files on the Adafruit website.  You can get more details there.
+Code is commented and should be fairly self-explanatory.  It is based heavily off of learning files on the Adafruit website.  This project modified the original code from Adafruit for the specific needs of this project.  
+
+MIT License
+
+Copyright (c) [2022] [don williams]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
