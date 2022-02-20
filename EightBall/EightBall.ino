@@ -16,6 +16,9 @@
   BSD license, check license.txt for more information
   All text above, and the splash screen below must be
   included in any redistribution.
+  
+  The code below has been modified from the original Adafruit examples to 
+  fit the needs of this specific project.
  **************************************************************************/
 
 #include <SPI.h>
